@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PoultryTrack | Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="app-layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>PoultryTrack</h2>
+        <p class="subtitle">ENVIRONMENT MONITOR</p>
+
+        <div class="farm-info">
+            <strong>Riverside Poultry Farm</strong>
+            <p>Port Harcourt, Nigeria</p>
+        </div>
+
+        <nav>
+            <a href="/" class="active">Dashboard</a>
+            <a href="#">Monitoring</a>
+            <a href="#">Forecast</a>
+            <a href="#">Alerts</a>
+            <a href="#">Historical Data</a>
+            <a href="#">Settings</a>
+        </nav>
+    </aside>
+
+    <!-- Main dashboard -->
+    <main class="main-content">
+
+        <header class="page-header">
+            <h1>Dashboard</h1>
+            <p>Live conditions and heat-stress overview</p>
+        </header>
+
+        <div class="sensor-banner">
+            <strong>SIMULATED SENSOR · PT-01 · Main poultry house</strong>
+            <span>Illustrative sample data</span>
+        </div>
+
+        <!-- Environmental monitoring cards -->
+        <section class="metrics-grid">
+
+            <div class="metric-card">
+                <h3>Temperature</h3>
+                <p class="metric-value">32.0 °C</p>
+                <p class="metric-description">
+                    Indoor temperature · PT-01
+                </p>
+            </div>
+
+            <div class="metric-card">
+                <h3>Relative humidity</h3>
+                <p class="metric-value">78%</p>
+                <p class="metric-description">
+                    Indoor humidity · PT-01
+                </p>
+            </div>
+
+            <div class="metric-card">
+                <h3>Calculated heat-stress risk</h3>
+                <p class="metric-value">HIGH</p>
+                <p class="metric-description">
+                    Illustrative risk · Not yet calculated
+                </p>
+            </div>
+
+        </section>
+
+        <!-- Dashboard middle section -->
+        <section class="dashboard-grid">
+
+            <!-- Temperature and humidity trends -->
+            <div class="dashboard-panel">
+                <h3>Temperature & Humidity Trends</h3>
+
+                <p class="panel-description">
+                    Today's environmental readings
+                </p>
+
+                <div class="chart-container">
+                    <canvas id="environmentChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Indoor heat-stress forecast -->
+            <div class="dashboard-panel">
+                <h3>Indoor Heat-Stress Forecast</h3>
+
+                <p class="panel-description">
+                    Predicted conditions in 30 minutes
+                </p>
+
+                <div class="forecast-details">
+                    <p><strong>Temperature:</strong> 33.4 °C</p>
+                    <p><strong>Humidity:</strong> 80%</p>
+                    <p><strong>THI:</strong> Not yet calculated</p>
+                    <p><strong>Risk:</strong> Illustrative HIGH</p>
+                </div>
+
+                <p class="panel-description">
+                    Example values only — forecasting algorithm
+                    not yet implemented.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- Dashboard bottom section -->
+        <section class="dashboard-grid">
+
+            <!-- Recent alerts -->
+            <div class="dashboard-panel">
+                <h3>Recent Alerts</h3>
+
+                <div class="alert-item">
+                    <strong>HIGH — Heat-stress risk</strong>
+                    <p>Illustrative current risk warning</p>
+                </div>
+
+                <div class="alert-item">
+                    <strong>Sensor disconnection</strong>
+                    <p>PT-02 is not reporting data (example)</p>
+                </div>
+            </div>
+
+            <!-- Sensor status -->
+            <div class="dashboard-panel">
+                <h3>Sensor Status</h3>
+
+                <p><strong>PT-01:</strong> Connected (example)</p>
+                <p><strong>PT-02:</strong> Disconnected (example)</p>
+
+                <p class="panel-description">
+                    Sensor connectivity will be monitored
+                    when MQTT integration is implemented.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>

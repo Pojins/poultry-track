@@ -1,0 +1,68 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="fitMrV95A8VSuvUUDZcY">
+    <mxGraphModel dx="1378" dy="741" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="VuYRVfXOM1Vsyso9TBil-18" edge="1" parent="1" source="UGwuqKUnHVrf79HzVs_9-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="VuYRVfXOM1Vsyso9TBil-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UGwuqKUnHVrf79HzVs_9-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="&lt;font face=&quot;Comic Sans MS&quot;&gt;Simulated&amp;nbsp; IoT sensors&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Comic Sans MS&quot;&gt;(Indoor temperature and humidity)&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="120" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="VuYRVfXOM1Vsyso9TBil-24" edge="1" parent="1" source="UGwuqKUnHVrf79HzVs_9-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="VuYRVfXOM1Vsyso9TBil-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UGwuqKUnHVrf79HzVs_9-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="&lt;font face=&quot;Comic Sans MS&quot;&gt;Weather API&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="360" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="VuYRVfXOM1Vsyso9TBil-2" edge="1" parent="1" source="UGwuqKUnHVrf79HzVs_9-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="UGwuqKUnHVrf79HzVs_9-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VuYRVfXOM1Vsyso9TBil-4" edge="1" parent="1" source="UGwuqKUnHVrf79HzVs_9-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.583;entryY=-0.05;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="UGwuqKUnHVrf79HzVs_9-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UGwuqKUnHVrf79HzVs_9-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font face=&quot;Comic Sans MS&quot;&gt;( DATA SOURCES )&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="94" x="250" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VuYRVfXOM1Vsyso9TBil-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Forecasting &amp;amp; Heat-Stress Assessment Algorithm" vertex="1">
+          <mxGeometry height="60" width="120" x="360" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="VuYRVfXOM1Vsyso9TBil-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="&lt;font face=&quot;Comic Sans MS&quot;&gt;Database&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="120" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="VuYRVfXOM1Vsyso9TBil-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="&lt;font face=&quot;Comic Sans MS&quot;&gt;Web Dashboard&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="600" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="VuYRVfXOM1Vsyso9TBil-25" edge="1" parent="1" source="VuYRVfXOM1Vsyso9TBil-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="VuYRVfXOM1Vsyso9TBil-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VuYRVfXOM1Vsyso9TBil-17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="&lt;font face=&quot;Comic Sans MS&quot;&gt;MQTT Server&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="120" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="VuYRVfXOM1Vsyso9TBil-41" edge="1" parent="1" source="VuYRVfXOM1Vsyso9TBil-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;startArrow=classic;startFill=1;" target="VuYRVfXOM1Vsyso9TBil-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VuYRVfXOM1Vsyso9TBil-20" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="&lt;font face=&quot;Comic Sans MS&quot;&gt;Flask Backend&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="360" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="VuYRVfXOM1Vsyso9TBil-38" edge="1" parent="1" source="VuYRVfXOM1Vsyso9TBil-6" style="endArrow=classic;startArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="VuYRVfXOM1Vsyso9TBil-20" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="420" y="360" as="sourcePoint" />
+            <mxPoint x="470" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VuYRVfXOM1Vsyso9TBil-39" edge="1" parent="1" source="VuYRVfXOM1Vsyso9TBil-9" style="endArrow=classic;startArrow=classic;html=1;rounded=1;defaultLabelBackgroundColor=page;exitX=0.442;exitY=-0.033;exitDx=0;exitDy=0;curved=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="VuYRVfXOM1Vsyso9TBil-20" value="">
+          <mxGeometry height="50" relative="1" width="50" x="-0.3327" as="geometry">
+            <Array as="points">
+              <mxPoint x="173.47" y="320" />
+              <mxPoint x="420" y="320" />
+            </Array>
+            <mxPoint x="260" y="340" as="sourcePoint" />
+            <mxPoint x="310" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
