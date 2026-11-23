@@ -64,3 +64,82 @@ new Chart(chartCanvas, {
         }
     }
 });
+
+
+async function updateSensorReadings() {
+    try {
+        const response = await fetch("/api/readings/latest");
+
+        if (!response.ok) {
+            throw new Error("Failed to retrieve sensor readings");
+        }
+
+        const reading = await response.json();
+
+        document.getElementById("temperatureValue").textContent =
+            `${reading.temperature.toFixed(1)} °C`;
+
+        document.getElementById("humidityValue").textContent =
+            `${reading.humidity.toFixed(1)}%`;
+
+        const recordedTime = new Date(reading.recorded_at);
+
+        document.getElementById("sensorUpdateTime").textContent =
+            `Last simulated reading: ${recordedTime.toLocaleString("en-GB", {
+                timeZone: "Africa/Lagos"
+            })} (WAT)`;
+
+    } catch (error) {
+        console.error("Sensor reading error:", error);
+
+        document.getElementById("sensorUpdateTime").textContent =
+            "Unable to retrieve sensor readings";
+    }
+}
+
+
+async function updateSensorStatus() {
+    try {
+        const response = await fetch("/api/sensors/status");
+
+        if (!response.ok) {
+            throw new Error("Failed to retrieve sensor status");
+        }
+
+        const sensor = await response.json();
+
+        document.getElementById("sensorStatus").textContent =
+            sensor.status;
+
+        const details = document.getElementById("sensorStatusDetails");
+
+        if (sensor.status === "Reporting") {
+            details.textContent =
+                `Latest reading received ${sensor.seconds_since_reading.toFixed(1)} seconds ago.`;
+        } else if (sensor.status === "Not reporting") {
+            details.textContent =
+                `No new reading for ${sensor.seconds_since_reading.toFixed(1)} seconds.`;
+        } else {
+            details.textContent =
+                "No readings have been recorded for this sensor.";
+        }
+
+    } catch (error) {
+        console.error("Sensor status error:", error);
+
+        document.getElementById("sensorStatus").textContent =
+            "Unavailable";
+
+        document.getElementById("sensorStatusDetails").textContent =
+            "Unable to check sensor status.";
+    }
+}
+
+updateSensorStatus();
+
+setInterval(updateSensorStatus, 5000);
+
+updateSensorReadings();
+
+setInterval(updateSensorReadings, 5000);
+

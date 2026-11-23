@@ -43,7 +43,7 @@
 
         <div class="sensor-banner">
             <strong>SIMULATED SENSOR · PT-01 · Main poultry house</strong>
-            <span>Illustrative sample data</span>
+            <span id="sensorUpdateTime">Waiting for simulated sensor readings...</span>
         </div>
 
         <!-- Environmental monitoring cards -->
@@ -51,7 +51,7 @@
 
             <div class="metric-card">
                 <h3>Temperature</h3>
-                <p class="metric-value">32.0 °C</p>
+                <p class="metric-value" id="temperatureValue">-- °C</p>
                 <p class="metric-description">
                     Indoor temperature · PT-01
                 </p>
@@ -59,7 +59,7 @@
 
             <div class="metric-card">
                 <h3>Relative humidity</h3>
-                <p class="metric-value">78%</p>
+                <p class="metric-value" id="humidityValue">--%</p>
                 <p class="metric-description">
                     Indoor humidity · PT-01
                 </p>
@@ -133,17 +133,21 @@
             </div>
 
             <!-- Sensor status -->
+            
+            <!-- Sensor status -->
             <div class="dashboard-panel">
                 <h3>Sensor Status</h3>
 
-                <p><strong>PT-01:</strong> Connected (example)</p>
-                <p><strong>PT-02:</strong> Disconnected (example)</p>
+                <p>
+                    <strong>PT-01:</strong>
+                    <span id="sensorStatus">Checking...</span>
+                </p>
 
-                <p class="panel-description">
-                    Sensor connectivity will be monitored
-                    when MQTT integration is implemented.
+                <p class="panel-description" id="sensorStatusDetails">
+                    Checking the latest simulated sensor reading.
                 </p>
             </div>
+
 
         </section>
 
